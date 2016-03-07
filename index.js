@@ -29,14 +29,15 @@ function rowMaker(obj) {
 function openChat(id) {
   var obj;
   $.getJSON('data.json', function(data) {
-     for (var i = 0; i < data.length; i++) {
+    for (var i = 0; i < data.length; i++) {
       if(data[i].id === id) {
         obj = data[i];
       }
-     }
-     return obj;
+    }
+    return obj;
   }).done(function () {
     $('#list').empty();
+    $('#list').append("<h2 class='chatTitle'>List of messages started by "+obj['requested_by']+" on</h2><h2>"+new Date(obj['created_at'])+" <a href='/' class='backBtn'>Back to all chats</a></h2>");
     var rowDiv = $("<div class='rowDiv' id='"+obj['id']+"'></div>");
     rowDiv.append("<h5 style='font-style: italic;'>Initial Message</h5>");
     var created_at = $("<p class='date'>"+new Date(obj['created_at'])+"</p>");
