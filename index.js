@@ -37,7 +37,7 @@ function openChat(id) {
     return obj;
   }).done(function () {
     $('#list').empty();
-    $('#list').append("<h2 class='chatTitle'>List of messages started by "+obj['requested_by']+" on</h2><h2>"+new Date(obj['created_at'])+" <a href='/' class='backBtn'>Back to all chats</a></h2>");
+    $('#list').append("<h2 class='chatTitle'>List of messages started by "+obj['requested_by']+" on</h2><h2>"+new Date(obj['created_at'])+" <a href='http://www.kolbeypruitt.com/using-data/' class='backBtn'>Back to all chats</a></h2>");
     var rowDiv = $("<div class='rowDiv' id='"+obj['id']+"'></div>");
     rowDiv.append("<h5 style='font-style: italic;'>Initial Message</h5>");
     var created_at = $("<p class='date'>"+new Date(obj['created_at'])+"</p>");
