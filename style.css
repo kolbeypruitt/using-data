@@ -1,0 +1,17 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.rowDiv {
+  background-color: #6bb2f2;
+  border-radius: 6px;
+  padding: 3px 10px;
+  margin: 5px 5px;
+}
+
+.date {
+  float: right;
+}
+
